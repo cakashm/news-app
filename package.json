@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Node.js app to fetch and display latest news using NewsAPI",
   "main": "index.js",
-   "scripts": {
+  "scripts": {
     "start": "node index.js"
   },
   "dependencies": {
