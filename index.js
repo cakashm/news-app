@@ -1,9 +1,9 @@
 const express = require('express');
 const axios = require('axios');
-const app = express();
 
-const NEWS_API_KEY = 'your_api_key_here'; // Replace with your key
+const app = express();
 const PORT = 3000;
+const NEWS_API_KEY = 'your_api_key_here'; // Replace this!
 
 app.get('/', async (req, res) => {
   const { country = 'us', category = 'technology', q = '' } = req.query;
@@ -18,7 +18,7 @@ app.get('/', async (req, res) => {
       html += `
         <div>
           <h2>${article.title}</h2>
-          <p>${article.description || 'No description.'}</p>
+          <p>${article.description || 'No description available.'}</p>
           <a href="${article.url}" target="_blank">Read more</a>
         </div>
       `;
@@ -26,6 +26,7 @@ app.get('/', async (req, res) => {
 
     res.send(html);
   } catch (err) {
+    console.error(err.message);
     res.send('Error fetching news.');
   }
 });
