@@ -2,9 +2,9 @@
   "name": "news-app",
   "version": "1.0.0",
   "description": "Node.js app to fetch and display latest news using NewsAPI",
-  "main": "index.js",
+  "main": "index.cjs",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.cjs"
   },
   "dependencies": {
     "axios": "^1.6.0",
